@@ -1,176 +1,35 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>M Anas Badawi — Research, Policy & Euro-Mediterranean Affairs</title>
-<meta name="description" content="Personal website of M Anas Badawi — research, policy and Euro-Mediterranean affairs.">
-<style>
-:root{
-  --ink:#10202a;
-  --navy:#112833;
-  --paper:#f5f1e8;
-  --white:#fffdf8;
-  --teal:#0fb7a4;
-  --orange:#ff6b3d;
-  --pink:#d9537f;
-  --line:rgba(16,32,42,.18);
-  --max:1240px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-.container{width:min(var(--max),calc(100% - 48px));margin:auto}
-nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(245,241,232,.90);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-.logo{font-weight:850;letter-spacing:-.03em}.logo span{color:var(--orange)}
-.nav-links{display:flex;gap:24px;font-size:.9rem;font-weight:650}.nav-links a:hover{color:var(--orange)}
-.cv-btn{border:1px solid var(--ink);padding:10px 15px;border-radius:999px}.cv-btn:hover{background:var(--ink);color:var(--paper)!important}
-.hero{min-height:100vh;background:var(--navy);color:var(--white);padding-top:72px;display:grid;align-items:stretch;overflow:hidden}
-.hero-grid{width:min(var(--max),calc(100% - 48px));margin:auto;display:grid;grid-template-columns:1.15fr .85fr;min-height:calc(100vh - 72px)}
-.hero-copy{padding:90px 6vw 70px 0;display:flex;flex-direction:column;justify-content:center;position:relative}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:#b9d8d5;margin-bottom:28px}
-.kicker:before{content:"";width:42px;height:4px;background:var(--orange)}
-h1{font-size:clamp(4.8rem,10vw,9.5rem);line-height:.82;letter-spacing:-.075em;margin:0 0 38px;font-weight:900}
-h1 .accent{color:var(--teal)}
-.hero-line{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.55rem,2.4vw,2.55rem);line-height:1.25;max-width:820px;margin:0 0 34px;color:#fff8ef;font-weight:400}
-.hero-note{max-width:650px;color:#b9c7c8;font-size:1.02rem}.hero-note strong{color:white}
-.hero-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.pill{padding:11px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.34);font-size:.88rem;font-weight:700}.pill:hover{background:var(--teal);border-color:var(--teal)}
-.hero-photo{position:relative;min-height:650px}.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 26%;filter:saturate(.92) contrast(1.02)}
-.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy) 0%,transparent 24%,transparent 78%,rgba(17,40,51,.12) 100%)}
-.hero-stamp{position:absolute;right:28px;bottom:28px;z-index:2;background:var(--orange);color:white;padding:11px 15px;font-size:.8rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-2deg)}
-.section{padding:112px 0;border-bottom:1px solid var(--line)}
-.section-head{display:grid;grid-template-columns:180px 1fr;gap:40px;margin-bottom:65px}.num{font-size:.78rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:#63727a;padding-top:9px}.section h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3rem,6vw,6.2rem);line-height:.92;letter-spacing:-.055em;margin:0;font-weight:400;max-width:1000px}
-.intro-grid{display:grid;grid-template-columns:1fr .88fr;gap:72px;align-items:start}.intro-copy{font-size:1.23rem;max-width:690px}.intro-copy p{margin:0 0 22px}.drop{font-family:Georgia,"Times New Roman",serif;font-size:4.6rem;line-height:.75;float:left;margin:12px 10px 0 0;color:var(--orange)}
-.photo-card{position:relative}.photo-card img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}.caption{font-size:.78rem;margin-top:10px;color:#65737a}.tag{position:absolute;top:18px;left:-18px;background:var(--teal);color:white;padding:9px 12px;font-size:.74rem;text-transform:uppercase;letter-spacing:.12em;font-weight:850}
-.quote-band{background:var(--orange);color:#fff7ed;padding:78px 0}.quote-band blockquote{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.4rem,5.5vw,5.6rem);line-height:1;letter-spacing:-.05em;margin:0;max-width:1100px}.quote-band small{display:block;margin-top:22px;font-family:Inter,system-ui,sans-serif;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800}
-.questions{background:var(--white)}.question-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--ink)}.question{padding:34px 28px 38px;min-height:300px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);display:flex;flex-direction:column}.q-no{font-size:.75rem;letter-spacing:.14em;font-weight:900;color:var(--orange)}.question h3{font-family:Georgia,"Times New Roman",serif;font-size:2rem;line-height:1.07;font-weight:400;margin:48px 0 18px}.question p{margin:auto 0 0;color:#516169}.question:nth-child(2){background:var(--teal);color:white}.question:nth-child(2) p,.question:nth-child(2) .q-no{color:white}.question:nth-child(3){background:var(--navy);color:white}.question:nth-child(3) p{color:#b9c7c8}
-.research-note{margin-top:44px;display:grid;grid-template-columns:1fr 2fr;gap:38px}.research-note .label{font-size:.8rem;text-transform:uppercase;letter-spacing:.14em;font-weight:900}.research-note p{font-family:Georgia,"Times New Roman",serif;font-size:1.55rem;line-height:1.45;margin:0}
-.journey{background:var(--navy);color:white}.journey .num{color:#8eacad}.journey-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px}.timeline{border-top:1px solid rgba(255,255,255,.28)}.step{display:grid;grid-template-columns:110px 1fr;gap:26px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.18)}.year{color:var(--teal);font-weight:900}.step h3{margin:0 0 5px;font-size:1.05rem}.step p{margin:0;color:#b7c3c5;font-size:.94rem}.journey-photo-stack{display:grid;grid-template-columns:1fr 1fr;gap:14px}.journey-photo-stack img{width:100%;height:245px;object-fit:cover}.journey-photo-stack img:first-child{grid-column:1/-1;height:340px}
-.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.work-card{background:var(--white);border:1px solid var(--line);overflow:hidden}.work-card img{width:100%;height:310px;object-fit:cover}.work-body{padding:26px}.work-meta{font-size:.75rem;color:var(--orange);letter-spacing:.12em;text-transform:uppercase;font-weight:900}.work-card h3{font-family:Georgia,"Times New Roman",serif;font-size:2.05rem;line-height:1.05;margin:10px 0 14px;font-weight:400}.work-card p{color:#596870;margin:0}.work-card:nth-child(2) .work-body{border-top:6px solid var(--teal)}.work-card:nth-child(3) .work-body{border-top:6px solid var(--orange)}.work-card:nth-child(4) .work-body{border-top:6px solid var(--pink)}
-.academic{background:var(--teal);color:white}.academic .num{color:#d4fffa}.academic-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.degree{padding:24px 0;border-top:1px solid rgba(255,255,255,.45)}.degree:first-child{border-top:0}.degree .school{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;font-weight:900}.degree h3{font-family:Georgia,"Times New Roman",serif;font-size:2rem;font-weight:400;line-height:1.1;margin:8px 0}.degree p{margin:0;color:#effffa}.award-box{align-self:center;background:var(--paper);color:var(--ink);padding:40px;transform:rotate(1.2deg);box-shadow:0 20px 60px rgba(0,0,0,.12)}.award-box .mini{color:var(--orange);font-weight:900;text-transform:uppercase;letter-spacing:.13em;font-size:.75rem}.award-box h3{font-family:Georgia,"Times New Roman",serif;font-size:2.6rem;line-height:1.05;font-weight:400;margin:14px 0}.award-box p{margin:0;color:#506169}
-.elsewhere-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px}.elsewhere-copy{font-family:Georgia,"Times New Roman",serif;font-size:1.65rem;line-height:1.45}.elsewhere-copy p{margin-top:0}.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mosaic img{width:100%;height:220px;object-fit:cover}.mosaic img:first-child{grid-column:1/-1;height:330px}
-.contact{background:var(--orange);color:#fff8f0;padding:90px 0}.contact-grid{display:grid;grid-template-columns:1fr .75fr;gap:60px;align-items:end}.contact h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(4rem,8vw,8rem);line-height:.84;letter-spacing:-.06em;margin:0;font-weight:400}.contact p{font-size:1.1rem;max-width:560px}.contact-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.contact-links a{border:1px solid rgba(255,255,255,.65);padding:12px 16px;border-radius:999px;font-weight:850}.contact-links a:hover{background:white;color:var(--orange)}
-footer{background:var(--ink);color:#aebbbf;padding:30px 0;font-size:.82rem}.footer-inner{display:flex;justify-content:space-between;gap:20px}
-@media(max-width:900px){
- .container,.hero-grid{width:min(100% - 30px,var(--max))}.nav-links a:not(.cv-btn){display:none}.hero-grid{grid-template-columns:1fr}.hero-copy{padding:65px 0 30px}.hero-photo{min-height:520px}.hero-photo:after{background:linear-gradient(180deg,var(--navy) 0%,transparent 18%)}.section{padding:82px 0}.section-head{grid-template-columns:1fr;gap:14px}.intro-grid,.journey-grid,.academic-grid,.elsewhere-grid,.contact-grid{grid-template-columns:1fr}.question-grid{grid-template-columns:1fr}.research-note{grid-template-columns:1fr}.work-grid{grid-template-columns:1fr}.journey-photo-stack img,.journey-photo-stack img:first-child{height:260px}.hero-photo img{object-position:center 20%}}
-@media(max-width:560px){h1{font-size:4.4rem}.container,.hero-grid{width:calc(100% - 24px)}.section h2{font-size:3rem}.hero-line{font-size:1.45rem}.step{grid-template-columns:80px 1fr}.journey-photo-stack{grid-template-columns:1fr}.journey-photo-stack img:first-child{grid-column:auto}.mosaic{grid-template-columns:1fr}.mosaic img:first-child{grid-column:auto}.footer-inner{flex-direction:column}.contact h2{font-size:4rem}}
-</style>
-</head>
-<body>
-<nav>
-  <div class="container nav-inner">
-    <a class="logo" href="#top">M Anas Badawi<span>.</span></a>
-    <div class="nav-links">
-      <a href="#about">About</a><a href="#research">Research</a><a href="#journey">Journey</a><a href="#work">Work</a><a href="#elsewhere">Elsewhere</a>
-      <a class="cv-btn" href="Anas_Badawi_CV.pdf" target="_blank">CV</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="hero-grid">
-    <div class="hero-copy">
-      <div class="kicker">Research · Policy · Euro-Mediterranean affairs</div>
-      <h1>M Anas<br><span class="accent">Badawi</span></h1>
-      <p class="hero-line">I try to understand how policies are shaped across borders — and how institutions respond when societies change.</p>
-      <p class="hero-note">For about a decade, my work has moved between <strong>people, policy and institutions</strong>: from youth networks and dialogue, to UN programmes, regional advocacy and, increasingly, academic research.</p>
-      <div class="hero-links"><a class="pill" href="#research">What I am exploring</a><a class="pill" href="#contact">Say hello</a></div>
-    </div>
-    <div class="hero-photo"><img src="profile.jpg" alt="Portrait of M Anas Badawi"><div class="hero-stamp">Based in Warsaw · Looking outward</div></div>
-  </div>
-</header>
-
-<section class="section" id="about">
-  <div class="container">
-    <div class="section-head"><div class="num">01 / About</div><h2>I became curious about people before I became curious about institutions.</h2></div>
-    <div class="intro-grid">
-      <div class="intro-copy">
-        <p><span class="drop">I</span>come from the Levant, a region where identities, communities and borders have always overlapped. Diversity was not something I first met in a classroom. It was around me.</p>
-        <p>My early work was built around dialogue, young people and participation. I wanted to meet people with different backgrounds, listen to how they saw their societies, and create spaces where disagreement did not have to mean distance.</p>
-        <p>Over time, another question kept returning: <strong>who shapes the policies that affect these societies, and why do institutions act the way they do?</strong> That question slowly moved me from practice towards research.</p>
-      </div>
-      <div class="photo-card"><span class="tag">Dialogue / Learning</span><img src="training.png" alt="Anas facilitating a training session"><div class="caption">Years of facilitation, dialogue and youth work shaped the questions I later brought into policy research.</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="quote-band"><div class="container"><blockquote>Practice gave me the questions. Academia gave me new tools.</blockquote><small>A path rather than a switch</small></div></section>
-
-<section class="section questions" id="research">
-  <div class="container">
-    <div class="section-head"><div class="num">02 / Research</div><h2>What I am trying to understand now.</h2></div>
-    <div class="question-grid">
-      <article class="question"><div class="q-no">Question 01</div><h3>How does the EU act when a neighbouring society goes through political change?</h3><p>This question grew from my research on the EU response to Syria after December 2024.</p></article>
-      <article class="question"><div class="q-no">Question 02</div><h3>When institutions and Member States share responsibility, what makes their external action coherent?</h3><p>I am interested in the legal, institutional and political organisation behind what we often simply call “EU action”.</p></article>
-      <article class="question"><div class="q-no">Question 03</div><h3>Do the same patterns appear outside the European neighbourhood?</h3><p>That curiosity has taken me towards EU-Myanmar relations and the possibility of comparison across political transitions.</p></article>
-    </div>
-    <div class="research-note"><div class="label">Current direction</div><p>I am not trying to lock myself into one country or one region. The Euro-Mediterranean space is where much of my experience comes from, but comparison helps me see whether the patterns I notice are local — or part of something wider.</p></div>
-  </div>
-</section>
-
-<section class="section journey" id="journey">
-  <div class="container">
-    <div class="section-head"><div class="num">03 / Journey</div><h2>Moving through places changed the questions I ask.</h2></div>
-    <div class="journey-grid">
-      <div class="timeline">
-        <div class="step"><div class="year">Damascus</div><div><h3>Dialogue, youth and civic space</h3><p>Y-PEER, Tawleh, training, public dialogue and civil society work.</p></div></div>
-        <div class="step"><div class="year">Dubai</div><div><h3>Looking for a wider horizon</h3><p>A short chapter of exploring possibilities beyond the place I knew best.</p></div></div>
-        <div class="step"><div class="year">Sofia</div><div><h3>A first cross-border professional chapter</h3><p>Regional work and a different view of Europe from the Balkans.</p></div></div>
-        <div class="step"><div class="year">Kraków + Siena</div><div><h3>International relations and public diplomacy</h3><p>Study became a way to put concepts around experiences I had already lived.</p></div></div>
-        <div class="step"><div class="year">Warsaw</div><div><h3>European affairs and research</h3><p>The College of Europe sharpened my interest in EU external action, coherence and political transitions.</p></div></div>
-        <div class="step"><div class="year">Next?</div><div><h3>Still open</h3><p>I prefer a clear direction to a fixed destination.</p></div></div>
-      </div>
-      <div class="journey-photo-stack"><img src="tadween-group.png" alt="Group around a table during a civic and cultural initiative"><img src="geneva.png" alt="Anas in Geneva"><img src="brussels.png" alt="Anas speaking in Brussels"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="work">
-  <div class="container">
-    <div class="section-head"><div class="num">04 / Selected work</div><h2>Different roles, one long conversation about participation and policy.</h2></div>
-    <div class="work-grid">
-      <article class="work-card"><img src="tawleh.png" alt="Tawleh community members"><div class="work-body"><div class="work-meta">Tawleh</div><h3>Creating space for dialogue</h3><p>I founded Tawleh as a civic dialogue platform. It grew from a simple belief that people need spaces to disagree, participate and remain curious about one another.</p></div></article>
-      <article class="work-card"><img src="tadween-group.png" alt="Tadween group"><div class="work-body"><div class="work-meta">Y-PEER / youth networks</div><h3>Learning through people</h3><p>I coordinated a national youth network with hundreds of members, worked with peer educators and spent years facilitating conversations on participation, equality and civic life.</p></div></article>
-      <article class="work-card"><img src="geneva.png" alt="Anas during international engagement in Geneva"><div class="work-body"><div class="work-meta">UNDP / policy practice</div><h3>From participation to policy</h3><p>At UNDP Syria, I worked on civil society policy and regulatory reform, including policy papers, workshops and stakeholder engagement.</p></div></article>
-      <article class="work-card"><img src="tunis.png" alt="Anas at a regional workshop in Tunis"><div class="work-body"><div class="work-meta">MARA-Méditerranée</div><h3>Back to the Mediterranean</h3><p>My current professional work brings together advocacy, partnerships and regional cooperation across the Mediterranean — now seen through the eyes of someone increasingly rooted in research.</p></div></article>
-    </div>
-  </div>
-</section>
-
-<section class="section academic">
-  <div class="container">
-    <div class="section-head"><div class="num">05 / Academic path</div><h2>Study did not replace the journey. It helped me read it differently.</h2></div>
-    <div class="academic-grid">
-      <div>
-        <div class="degree"><div class="school">College of Europe · Natolin</div><h3>European Interdisciplinary Studies</h3><p>EU in the Wider Europe and its Neighbours · Graduated Very Good</p></div>
-        <div class="degree"><div class="school">Jagiellonian University</div><h3>International Relations & Public Diplomacy</h3><p>Graduate study in diplomacy, international relations and policy.</p></div>
-        <div class="degree"><div class="school">University of Siena</div><h3>Public & Cultural Diplomacy</h3><p>A second academic lens shaped by Italy and the Mediterranean.</p></div>
-        <div class="degree"><div class="school">Damascus University</div><h3>Dentistry</h3><p>My first degree — and proof that paths do not always need to be linear.</p></div>
-      </div>
-      <aside class="award-box"><div class="mini">Selected recognition</div><h3>Outstanding Master’s Thesis in European Neighbourhood Studies</h3><p>College of Europe, Natolin. My thesis examined how the division of competences affected the coherence of EU reactions and actions towards post-Assad Syria.</p></aside>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="elsewhere">
-  <div class="container">
-    <div class="section-head"><div class="num">06 / Elsewhere</div><h2>The world makes more sense to me when I can move through it.</h2></div>
-    <div class="elsewhere-grid">
-      <div class="elsewhere-copy"><p>I like cities, languages, photography and the small differences in how people organise everyday life. Travelling is not separate from how I think about policy. It reminds me that institutions eventually meet real streets, families, habits and memories.</p><p>I am usually happiest walking through a place I do not know yet, carrying a camera, noticing details, and trying to understand how people make a place their own.</p><p><strong>Based in Warsaw. Thinking across the Mediterranean and beyond.</strong></p></div>
-      <div class="mosaic"><img src="writing.png" alt="Anas writing in a notebook"><img src="tunis.png" alt="Anas in Tunis"><img src="brussels.png" alt="Anas in Brussels"></div>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="container contact-grid">
-    <div><h2>Let’s stay<br>in touch.</h2></div>
-    <div><p>I am always open to conversations around research, policy, the Euro-Mediterranean region, new comparisons, and possible collaborations.</p><div class="contact-links"><a href="mailto:anas.badawi8@gmail.com">Email</a><a href="https://www.linkedin.com/in/anas-badawi96/" target="_blank" rel="noopener">LinkedIn</a><a href="Anas_Badawi_CV.pdf" target="_blank">CV</a></div></div>
-  </div>
-</section>
-<footer><div class="container footer-inner"><div>© 2026 M Anas Badawi</div><div>Warsaw · Europe · Mediterranean · Beyond</div></div></footer>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Writing · M Anas Badawi</title><style>
+:root{--ink:#102a2e;--paper:#f7f4ee;--teal:#2a9d8f;--orange:#e76f51;--blue:#264653;--line:#d8d2c7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}.site-nav{position:sticky;top:0;z-index:20;background:rgba(247,244,238,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:auto;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-weight:800;letter-spacing:.08em;text-transform:uppercase}.nav-links{display:flex;gap:22px;flex-wrap:wrap;font-size:.92rem}.nav-links a:hover{color:var(--orange)}
+main{max-width:1180px;margin:auto;padding:0 28px}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;padding:80px 0 70px}
+.kicker{font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);font-weight:700}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.03em}
+h1{font-size:clamp(3.8rem,8vw,7.2rem);line-height:.93;margin:.15em 0 .35em}h2{font-size:clamp(2.4rem,5vw,4.6rem);line-height:1.02;margin:.1em 0 .6em}h3{font-size:1.65rem;margin:.2em 0 .4em}
+.lede{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.35rem,2.2vw,2rem);line-height:1.45;max-width:780px}
+.hero img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px}.section{padding:80px 0;border-top:1px solid var(--line)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:44px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{padding:26px;border:1px solid var(--line);background:rgba(255,255,255,.35)}.meta{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#6e746f}
+.accent{background:var(--teal);color:white;padding:70px 28px;margin:50px calc(50% - 50vw)}.accent .inner{max-width:1180px;margin:auto}.orange{background:var(--orange)}.blue{background:var(--blue)}
+.photo-strip{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}.photo-strip img,.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.gallery img{aspect-ratio:4/3}
+.timeline{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:20px 0;border-top:1px solid var(--line)}.btn{display:inline-block;padding:12px 16px;border:1px solid currentColor;margin-right:10px;margin-top:12px}
+footer{max-width:1180px;margin:auto;padding:36px 28px 50px;font-size:.85rem;color:#66706b}.small{font-size:.92rem;color:#59615d}
+@media(max-width:850px){.hero,.grid-2,.grid-3,.photo-strip,.gallery{grid-template-columns:1fr}.nav-links{gap:12px;font-size:.84rem}.timeline{grid-template-columns:1fr}.hero{padding-top:50px}}
+</style></head><body>
+<nav class="site-nav"><div class="nav-inner">
+<a class="brand" href="/">M Anas Badawi</a>
+<div class="nav-links">
+<a href="/about/">About</a><a href="/research/">Research</a><a href="/experience/">Experience</a><a href="/writing/">Writing</a><a href="/elsewhere/">Elsewhere</a><a href="/contact/">Contact</a>
+</div></div></nav>
+<main>
+<section class="hero"><div><div class="kicker">Writing</div><h1>Research, policy and public writing</h1><p class="lede">I am still building this part of the site. I want it to become a place for academic work, policy papers and selected public writing.</p></div><img src="/writing.png" alt="Writing"></section>
+<section class="section"><div class="grid-2"><div><h2>Selected work</h2></div><div>
+<div class="card"><div class="meta">Master's thesis · 2026</div><h3>The EU’s Response to the Fall of the Assad Regime in Syria</h3><p>Outstanding Master’s Thesis in European Neighbourhood Studies, College of Europe.</p></div>
+<div class="card"><div class="meta">Policy work</div><h3>Civil society policy papers</h3><p>Earlier work with UNDP Syria included policy papers on civil society development, civic action and NGO regulation.</p></div>
+<p class="small">More publications and links will be added as they become available.</p>
+</div></div></section>
+</main><footer>© 2026 M Anas Badawi · Warsaw, Poland</footer></body></html>
