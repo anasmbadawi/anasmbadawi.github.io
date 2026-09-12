@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Anas Badawi</title>
+
+  <meta
+    name="description"
+    content="Personal academic and professional website of Anas Badawi."
+  />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f5f1;
+      color: #1d1d1b;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(246, 245, 241, 0.95);
+      border-bottom: 1px solid #d8d5cc;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: auto;
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a:hover {
+      opacity: 0.55;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 32px;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 90px 0;
+      border-bottom: 1px solid #d8d5cc;
+    }
+
+    .eyebrow {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 24px;
+      color: #6b6860;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: clamp(4rem, 9vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+      margin-bottom: 35px;
+    }
+
+    .hero-text {
+      max-width: 680px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.35rem, 2vw, 1.85rem);
+      line-height: 1.45;
+      color: #33312d;
+    }
+
+    .hero-side {
+      padding-top: 80px;
+    }
+
+    .hero-side p {
+      max-width: 350px;
+      color: #56534d;
+      margin-bottom: 28px;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-links a {
+      padding-bottom: 6px;
+      border-bottom: 1px solid #1d1d1b;
+      width: fit-content;
+    }
+
+    section {
+      padding: 100px 0;
+      border-bottom: 1px solid #d8d5cc;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 70px;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #6b6860;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 4vw, 4.5rem);
+      line-height: 1.05;
+      font-weight: 400;
+      margin-bottom: 36px;
+      letter-spacing: -0.03em;
+    }
+
+    .section-content {
+      max-width: 780px;
+    }
+
+    .section-content p {
+      font-size: 1.08rem;
+      margin-bottom: 20px;
+      color: #33312d;
+    }
+
+    .research-item,
+    .experience-item,
+    .publication-item {
+      padding: 28px 0;
+      border-top: 1px solid #d8d5cc;
+    }
+
+    .research-item:first-of-type,
+    .experience-item:first-of-type,
+    .publication-item:first-of-type {
+      border-top: 0;
+    }
+
+    .item-meta {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #77736b;
+      margin-bottom: 10px;
+    }
+
+    .item-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.5rem;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+
+    .item-description {
+      color: #4d4943;
+      max-width: 700px;
+    }
+
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 36px;
+    }
+
+    .topic {
+      border: 1px solid #a9a59c;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-size: 0.85rem;
+    }
+
+    .contact-box {
+      background: #1d1d1b;
+      color: #f6f5f1;
+      padding: 65px;
+    }
+
+    .contact-box h2 {
+      max-width: 700px;
+    }
+
+    .contact-links {
+      margin-top: 40px;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      border-bottom: 1px solid #f6f5f1;
+      padding-bottom: 5px;
+    }
+
+    footer {
+      max-width: 1180px;
+      margin: auto;
+      padding: 28px 32px 45px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 0.8rem;
+      color: #6b6860;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 30px;
+        padding: 70px 0;
+      }
+
+      .hero-side {
+        padding-top: 0;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .contact-box {
+        padding: 40px 28px;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#top">Anas Badawi</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Research · Policy · European External Action</div>
+
+        <h1>
+          Anas<br />
+          Badawi
+        </h1>
+
+        <p class="hero-text">
+          Researcher working on European Union external action,
+          political transitions, coherence and the European neighbourhood.
+        </p>
+      </div>
+
+      <div class="hero-side">
+        <p>
+          My work sits at the intersection of European studies,
+          international relations, public diplomacy and policy practice,
+          with particular interest in how institutions respond to political change.
+        </p>
+
+        <div class="hero-links">
+          <a href="#research">Explore research</a>
+          <a href="#experience">Selected experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-grid">
+
+        <div class="section-label">
+          01 / About
+        </div>
+
+        <div class="section-content">
+          <h2>
+            Research informed by both academic inquiry and policy practice.
+          </h2>
+
+          <p>
+            I am a researcher and policy professional focused on European Union
+            external action, political transitions and the European neighbourhood.
+            My academic work examines the legal, institutional and political
+            organisation of EU foreign policy and its implications for coherence.
+          </p>
+
+          <p>
+            I graduated from the College of Europe in Natolin with an Outstanding
+            Thesis in the EU Neighbourhood field, following postgraduate studies
+            in international relations, public diplomacy and cultural diplomacy.
+          </p>
+
+          <p>
+            Alongside research, I have worked across civil society, international
+            organisations and regional initiatives, connecting evidence, policy
+            and implementation.
+          </p>
+
+          <div class="topics">
+            <span class="topic">EU External Action</span>
+            <span class="topic">Political Transitions</span>
+            <span class="topic">EU Coherence</span>
+            <span class="topic">European Neighbourhood</span>
+            <span class="topic">Public Diplomacy</span>
+            <span class="topic">Qualitative Research</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section-grid">
+
+        <div class="section-label">
+          02 / Research
+        </div>
+
+        <div class="section-content">
+
+          <h2>
+            Understanding how the EU acts during moments of political transition.
+          </h2>
+
+          <div class="research-item">
+            <div class="item-meta">Current Research</div>
+
+            <div class="item-title">
+              Explaining and Assessing Coherence in EU External Action during Political Transitions
+            </div>
+
+            <p class="item-description">
+              A comparative research project examining how legal,
+              institutional and political organisation shapes the coherence
+              of EU and Member State reactions and actions, with comparative
+              attention to Myanmar after 2011 and Syria after 2024.
+            </p>
+          </div>
+
+          <div class="research-item">
+            <div class="item-meta">College of Europe Thesis</div>
+
+            <div class="item-title">
+              The EU’s Response to the Fall of the Assad Regime in Syria
+            </div>
+
+            <p class="item-description">
+              Research examining how the division of competences affected
+              coherence in EU reactions and actions toward Syria during
+              the political transition beginning in December 2024.
+            </p>
+          </div>
+
+          <div class="research-item">
+            <div class="item-meta">Methods</div>
+
+            <div class="item-title">
+              Process tracing, legal analysis and structured comparison
+            </div>
+
+            <p class="item-description">
+              My methodological interests include process tracing,
+              doctrinal legal analysis, qualitative document analysis,
+              discourse analysis, policy-cluster analysis and structured comparison.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-grid">
+
+        <div class="section-label">
+          03 / Publications
+        </div>
+
+        <div class="section-content">
+
+          <h2>
+            Selected research and writing.
+          </h2>
+
+          <div class="publication-item">
+            <div class="item-meta">Master's Thesis · 2026</div>
+
+            <div class="item-title">
+              The EU’s Response to the Fall of the Assad Regime in Syria
+            </div>
+
+            <p class="item-description">
+              Awarded Outstanding Thesis in the EU Neighbourhood field
+              at the College of Europe, Natolin.
+            </p>
+          </div>
+
+          <div class="publication-item">
+            <div class="item-meta">Forthcoming</div>
+
+            <div class="item-title">
+              Additional publications and research outputs
+            </div>
+
+            <p class="item-description">
+              This section will be updated with published articles,
+              book chapters, policy papers and other research outputs.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-grid">
+
+        <div class="section-label">
+          04 / Experience
+        </div>
+
+        <div class="section-content">
+
+          <h2>
+            Across research, international organisations and civil society.
+          </h2>
+
+          <div class="experience-item">
+            <div class="item-meta">MARA-Méditerranée</div>
+
+            <div class="item-title">
+              Advocacy & Partnerships
+            </div>
+
+            <p class="item-description">
+              Regional advocacy, partnerships and programme coordination
+              across the Mediterranean.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <div class="item-meta">UNDP Syria</div>
+
+            <div class="item-title">
+              Project Coordination & Policy Work
+            </div>
+
+            <p class="item-description">
+              Worked on civil-society policy and regulatory reform,
+              stakeholder engagement and project implementation.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <div class="item-meta">UNFPA · Y-PEER</div>
+
+            <div class="item-title">
+              National Network Management
+            </div>
+
+            <p class="item-description">
+              Managed a national youth network and supported programming,
+              partnerships and organisational development.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <div class="item-meta">Academic Background</div>
+
+            <div class="item-title">
+              College of Europe · Jagiellonian University · University of Siena
+            </div>
+
+            <p class="item-description">
+              Graduate training in European interdisciplinary studies,
+              international relations, public diplomacy and cultural diplomacy.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-box">
+
+        <div class="section-label" style="color:#aaa59b; margin-bottom:25px;">
+          05 / Contact
+        </div>
+
+        <h2>
+          Interested in research, policy collaboration or academic exchange?
+        </h2>
+
+        <div class="contact-links">
+          <a href="mailto:YOUR-EMAIL-HERE">Email</a>
+          <a href="YOUR-LINKEDIN-URL" target="_blank">LinkedIn</a>
+          <a href="YOUR-CV-LINK" target="_blank">Download CV</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>© 2026 Anas Badawi</div>
+    <div>Warsaw, Poland</div>
+  </footer>
+
+</body>
+</html>
